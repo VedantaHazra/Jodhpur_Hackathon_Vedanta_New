@@ -13,6 +13,8 @@ public class UIScript : MonoBehaviour
     public TextMeshProUGUI killText;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI timerText;
+    public AudioSource source;
+    public AudioClip gemClip;
 
 
     void Start()
@@ -23,6 +25,7 @@ public class UIScript : MonoBehaviour
 
     public void IncreaseGemCount()
     {
+        source.PlayOneShot(gemClip);
         gemCount--;
         gemText.text = "Gems Left = " + gemCount;
 

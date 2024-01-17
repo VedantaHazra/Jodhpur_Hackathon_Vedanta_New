@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     public UIScript uiScript;
     public float Timer = 200;
     private float timer;
+    public AudioSource source;
+    public AudioClip damageClip;
   //CharacterController characterController;
 //  Rigidbody _rigidbody;
   //public Swimmer swimmer;
@@ -34,7 +36,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
-
+        source.PlayOneShot(damageClip);
         health -= damage;
         uiScript.SetHealth(health);
         if (health <= 0) 
