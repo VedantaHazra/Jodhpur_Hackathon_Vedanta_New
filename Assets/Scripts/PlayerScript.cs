@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour
         if (health <= 0) 
         {
             SceneManager.LoadScene(
-                SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
 
